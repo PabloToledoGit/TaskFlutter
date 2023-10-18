@@ -22,10 +22,10 @@ class MyApp extends StatelessWidget {
           ),
           body: ListView(
             children: [
-              Task(nome: 'Aprendendo Flutter'),
-              Task(nome: 'Aprendendo Luta'),
-              Task(nome: 'Aprendendo Inglês'),
-              Task(nome: 'Aprendendo Andar de Skate'),
+              Task(nome: 'Aprendendo Flutter', foto: 'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',),
+              Task(nome: 'Aprendendo Luta', foto: '',),
+              Task(nome: 'Aprendendo Inglês', foto: '',),
+              Task(nome: 'Aprendendo Andar de Skate', foto: '',),
             ],
           )),
     );
@@ -33,9 +33,10 @@ class MyApp extends StatelessWidget {
 }
 
 class Task extends StatefulWidget {
-  const Task({super.key, required this.nome});
+  const Task({super.key, required this.nome, required this.foto});
 
   final String nome;
+  final String foto;
 
   @override
   State<Task> createState() => _TaskState();
@@ -74,7 +75,10 @@ class _TaskState extends State<Task> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text('Nivel $nivel'),
+                            child: Text(
+                              'Nivel $nivel',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ],
                       ),
@@ -91,6 +95,10 @@ class _TaskState extends State<Task> {
                       color: Colors.grey,
                       width: 120,
                       height: 100,
+                      child: Image.network(
+                        widget.foto,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                     Container(
                       width: 200,
