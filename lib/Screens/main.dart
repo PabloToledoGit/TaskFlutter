@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskalura/Screens/Tela1.dart';
 import 'Tela2.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Tela2(),
+      home: const Tela(),
     );
   }
 }

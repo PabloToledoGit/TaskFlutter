@@ -32,9 +32,9 @@ class _TaskState extends State<Task> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.black,
                     borderRadius: BorderRadius.circular(4.0)),
-                width: 500,
+                width: 400,
                 height: 140,
                 child: Align(
                     alignment: Alignment.bottomRight,
@@ -69,14 +69,14 @@ class _TaskState extends State<Task> {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(4.0)),
-                width: 500,
+                width: 400,
                 height: 100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       color: Colors.grey,
-                      width: 120,
+                      width: 100,
                       height: 100,
                       child: Image.network(
                         widget.foto,
@@ -97,17 +97,14 @@ class _TaskState extends State<Task> {
                         Difficulty(dificuldadeLevel: widget.dificuldade,)
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: FloatingActionButton(
-                        backgroundColor: Colors.blue,
-                        onPressed: () {
-                          setState(() {
-                            nivel++;
-                          });
-                        },
-                        child: const Icon(Icons.arrow_drop_up),
-                      ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.black,
+                      onPressed: () {
+                        setState(() {
+                          nivel++;
+                        });
+                      },
+                      child: const Icon(Icons.label, color: Colors.white,),
                     )
                   ],
                 ),
