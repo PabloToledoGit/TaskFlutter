@@ -29,7 +29,7 @@ class _Tela2State extends State<Tela2> {
               borderRadius: BorderRadius.circular(10),
               border: Border.all(width: 3),
             ),
-            child: const Column(
+            child:Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Formulario(),
@@ -41,5 +41,3 @@ class _Tela2State extends State<Tela2> {
     );
   }
 }
-
-
